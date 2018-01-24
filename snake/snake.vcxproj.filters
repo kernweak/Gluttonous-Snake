@@ -33,11 +33,14 @@
     <ClInclude Include="Snake.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Tools.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Barrer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +63,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Tools.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Barrer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

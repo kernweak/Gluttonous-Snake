@@ -2,6 +2,8 @@
 #include "Food.h"
 #include "Snake.h"
 #include "Barrer.h"
+
+//Ìí¼Ó×¢ÊÍÓÃÓÚ²âÊÔ
 class CGame
 {
 public:

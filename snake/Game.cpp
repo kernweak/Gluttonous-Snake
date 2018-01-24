@@ -4,7 +4,9 @@
 #include<iostream>
 #include<windows.h>
 #include<conio.h>
+#include <windows.h>
 #include"Barrer.h"
+#pragma comment(lib,"winmm.lib")
 using namespace std;
 
 const int CGame::K_LEFT = 5;
@@ -114,11 +116,14 @@ void CGame::run() {
 				m_pfood->show();
 			}
 			if (isOver()) {
+				PlaySoundA("sound\\撞墙.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 				m_blood = m_blood - 1;
 				if (m_blood == 0) {
 					stopMove = false;
+					PlaySoundA("sound\\游戏结束.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 					CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + CGame::K_HEIGH + 2);
 					cout << "失 败";
+					Sleep(1000);
 				}
 				CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + CGame::K_HEIGH + 2);
 				cout << "减一命";
@@ -176,17 +181,21 @@ bool CGame::isGoHighLeve()
 	switch (m_leve) {
 	case 1:
 		CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + CGame::K_HEIGH+2);
+		PlaySoundA("sound\\过关.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 		cout << "第一关" << endl;
 		break;
 	case 2:
 		CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + CGame::K_HEIGH+2);
+		PlaySoundA("sound\\过关.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 		cout << "第二关" << endl;
 		break;
 	case 3:
 		CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + CGame::K_HEIGH+2);
+		PlaySoundA("sound\\过关.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 		cout << "第三关" << endl;
 		break;
 	case 4:
+		PlaySoundA("sound\\过关.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 		CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + CGame::K_HEIGH);
 		cout << "通关" << endl;
 		return true;
@@ -224,3 +233,4 @@ void CGame::changeInformation() {
 	cout << "按ESC退出,空格键暂停";
 
 }
+

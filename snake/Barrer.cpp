@@ -6,6 +6,7 @@
 #include<conio.h>
 #include"Unit.h"
 #include"Game.h"
+#pragma comment(lib,"winmm.lib")
 using namespace std;
 
 CBarrer::CBarrer(char pic)
@@ -46,9 +47,9 @@ void CBarrer::MessageLoop() {
 			
 		}
 		else if (stcRecord.EventType == MOUSE_EVENT) {
-			
 			MOUSE_EVENT_RECORD mer=stcRecord.Event.MouseEvent;
 			if (mer.dwButtonState == FROM_LEFT_1ST_BUTTON_PRESSED) {
+				PlaySoundA("sound\\ЪѓБъ.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 				pos = stcRecord.Event.MouseEvent.dwMousePosition;
 				CUnit unit(pos.X, pos.Y, '#');
 				m_vecBarrer.push_back(unit);
@@ -60,6 +61,7 @@ void CBarrer::MessageLoop() {
 				cout <<'#';
 			}
 			else if (mer.dwButtonState == RIGHTMOST_BUTTON_PRESSED) {
+				PlaySoundA("sound\\ЪѓБъ.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 				CTools::writeCHar(0, 0);
 				cout << "             ";
 				CTools::writeCHar(0, 0);

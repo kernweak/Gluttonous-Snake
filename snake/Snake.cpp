@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Snake.h"
 #include <windows.h>
+#pragma comment(lib,"winmm.lib")
 
 CSnake::CSnake(int x,int y,int length,Directions direction,int speed,char pic)
 {
@@ -58,6 +59,7 @@ void CSnake::eraseSnake() {
 }
 
 void CSnake::changeDirection(int value) {
+	PlaySoundA("sound\\转向.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 	switch (value)
 	{
 	case 119://按下w键
@@ -117,6 +119,7 @@ void CSnake::growUp() {
 bool CSnake::eatFood(CFood* pFood) {
 	if (m_vecBody[0].m_ix == pFood->m_ix&&m_vecBody[0].m_iy == pFood->m_iy)
 	{
+		PlaySoundA("sound\\硬币.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 		growUp();
 		return true;
 	}

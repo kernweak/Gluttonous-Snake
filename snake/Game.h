@@ -13,6 +13,7 @@ public:
 	void drawInformation();//≥ı º–≈œ¢
 	void run();
 
+
 	bool isOver();
 	bool isGoHighLeve();
 	void changeInformation();

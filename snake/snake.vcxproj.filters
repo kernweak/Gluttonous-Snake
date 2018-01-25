@@ -59,13 +59,13 @@
     <ClCompile Include="Game.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="demo.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Tools.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Barrer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

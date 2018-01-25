@@ -4,6 +4,10 @@
 #include<stdio.h>
 #include "Unit.h"
 #include <iostream>
+#include <fstream>
+#include<string.h>
+#include "Game.h"
+
 #pragma comment(lib,"winmm.lib")
 using namespace std;
 CTools::CTools()
@@ -186,3 +190,17 @@ void CTools::start() {
 	CTools::writeCHar(120, 60);
 	getchar();
 }
+//
+//void CTools::save(CGame *game) {
+//	ofstream file;
+//	file.open("data.txt", ios::out|ios::binary);
+//	file.write((char*)game, sizeof(*game));
+//	file.close();
+//}
+//
+//void CTools::load(CGame *game) {
+//	fstream file;
+//	file.open("data.txt", ios::in|ios::binary);
+//	file.read((char*)game, sizeof(*game));
+//	file.close();
+//}

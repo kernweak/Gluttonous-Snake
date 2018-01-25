@@ -157,7 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Barrer.cpp" />
-    <ClCompile Include="demo.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Food.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Snake.cpp" />

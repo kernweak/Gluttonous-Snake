@@ -13,11 +13,9 @@ public:
 	void drawInformation();//≥ı º–≈œ¢
 	void run();
 
-
 	bool isOver();
 	bool isGoHighLeve();
 	void changeInformation();
-//	void setBarrer();
 public:
 	CFood* m_pfood;
 	CSnake* m_psnake;

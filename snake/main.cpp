@@ -21,7 +21,8 @@ int main(){
 			cout << "*******************************" << endl;
 			cout << "*1.地图编辑                   *" << endl;
 			cout << "*2.开始游戏                   *" << endl;
-			cout << "*3.保存                       *" << endl;
+//			cout << "*3.保存                       *" << endl;
+//			cout << "*5.载入                       *" << endl;
 			cout << "*4.退出                       *" << endl;
 			cout << "*******************************" << endl;
 			cin >> nNum;
@@ -34,8 +35,6 @@ int main(){
 				break;
 			case 2:
 				game.run();
-				break;
-			case 3:
 				break;
 			default:
 				break;

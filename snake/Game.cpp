@@ -9,6 +9,8 @@
 #pragma comment(lib,"winmm.lib")
 using namespace std;
 
+
+
 const int CGame::K_LEFT = 5;
 const int CGame::K_UP = 2;
 const int CGame::K_WIDTH = 110;
@@ -199,7 +201,7 @@ bool CGame::isGoHighLeve()
 		break;
 	case 4:
 		PlaySoundA("sound\\过关.wav", NULL, SND_ASYNC | SND_NODEFAULT);
-		CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + CGame::K_HEIGH);
+		CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + CGame::K_HEIGH+2);
 		cout << "通 关" << endl;
 		Sleep(2000);
 		return true;
@@ -237,4 +239,5 @@ void CGame::changeInformation() {
 	cout << "按ESC退出,空格键暂停";
 
 }
+
 

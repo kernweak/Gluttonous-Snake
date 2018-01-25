@@ -175,7 +175,7 @@ bool CGame::isOver(){
 
 bool CGame::isGoHighLeve()
 {
-	int tmp = m_score / 30 + 1;
+	int tmp = m_score / 20 + 1;
 	if (tmp == m_leve)return false;
 	m_leve = tmp;
 	switch (m_leve) {
@@ -183,21 +183,25 @@ bool CGame::isGoHighLeve()
 		CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + CGame::K_HEIGH+2);
 		PlaySoundA("sound\\过关.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 		cout << "第一关" << endl;
+		m_psnake->m_speed = m_psnake->m_speed - 150;
 		break;
 	case 2:
 		CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + CGame::K_HEIGH+2);
 		PlaySoundA("sound\\过关.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 		cout << "第二关" << endl;
+		m_psnake->m_speed = m_psnake->m_speed - 150;
 		break;
 	case 3:
 		CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + CGame::K_HEIGH+2);
 		PlaySoundA("sound\\过关.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 		cout << "第三关" << endl;
+		m_psnake->m_speed = m_psnake->m_speed - 150;
 		break;
 	case 4:
 		PlaySoundA("sound\\过关.wav", NULL, SND_ASYNC | SND_NODEFAULT);
 		CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + CGame::K_HEIGH);
-		cout << "通关" << endl;
+		cout << "通 关" << endl;
+		Sleep(2000);
 		return true;
 		break;
 	}

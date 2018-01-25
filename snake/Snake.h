@@ -11,7 +11,7 @@ typedef enum
 class CSnake
 {
 public:
-	CSnake(int x=34, int y=20, int length=4, Directions direction=RIGHT, int speed=300, char pic='*');
+	CSnake(int x=34, int y=20, int length=4, Directions direction=RIGHT, int speed=500, char pic='*');
 	virtual ~CSnake();
 	void showSnake();
 	void eraseSnake();

@@ -79,6 +79,8 @@ void CBarrer::drawArea1() {
 	for (int i = 0;i < CGame::K_WIDTH;i++) {
 		cout << '#';
 	}
+	CTools::writeCHar(CGame::K_LEFT, CGame::K_UP+1);
+	cout << "请在下方方块处添加障碍物，鼠标左键添加，右键完成";
 	for (int i = 0;i < CGame::K_HEIGH;i++) {
 		CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + 1 + i);
 		cout << '#';

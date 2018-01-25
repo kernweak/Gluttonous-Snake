@@ -127,6 +127,8 @@ void CGame::run() {
 					cout << "Ê§ °Ü";
 					Sleep(1000);
 				}
+
+
 				CTools::writeCHar(CGame::K_LEFT, CGame::K_UP + CGame::K_HEIGH + 2);
 				cout << "¼õÒ»Ãü";
 				changeInformation();
@@ -143,6 +145,7 @@ bool CGame::isOver(){
 //¼ì²âÊÇ·ñ×²Ç½,1.ÉÏ±ß
 	if (m_psnake->m_vecBody[0].m_iy <= CGame::K_UP+2) {
 		return true;
+
 	}
 //¼ì²âÊÇ·ñ×²Ç½,2.ÏÂ±ß
 	if (m_psnake->m_vecBody[0].m_iy >= CGame::K_UP + 1+ CGame::K_HEIGH) {
